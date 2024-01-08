@@ -36,7 +36,7 @@ fun ItemEditScreen(
             onPembeliValueChange = viewModel::updateUiState,
             onSaveClick = {
                 coroutineScope.launch {
-                    viewModel.updateSiswa()
+                    viewModel.updatePembeli()
                     navigateBack()
                 }
             },
