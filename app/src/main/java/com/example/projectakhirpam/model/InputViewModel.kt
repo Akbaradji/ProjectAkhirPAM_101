@@ -26,3 +26,16 @@ class InputViewModel (private val repositoriPembeli: RepositoriPembeli): ViewMod
         }
     }
 }
+
+data class UIStateBeli(
+    val detailPembeli : DetailPembeli = DetailPembeli(),
+    val isEntryValid : Boolean = false
+)
+
+data class DetailPembeli (
+    val id : Int = 0,
+    val nama : String = "",
+    val telpon : String = "",
+    val metode: String = "",
+    val harga: String = "",
+)
