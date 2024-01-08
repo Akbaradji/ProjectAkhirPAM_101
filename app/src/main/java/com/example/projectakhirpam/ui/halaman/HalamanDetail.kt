@@ -37,11 +37,13 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.projectakhirpam.R
 import com.example.projectakhirpam.data.pembeli
 import com.example.projectakhirpam.model.DetailViewModel
+import com.example.projectakhirpam.model.ItemDetailsUiState
 import com.example.projectakhirpam.model.PenyediaViewModel
+import com.example.projectakhirpam.model.toPembeli
 import com.example.projectakhirpam.navigasi.DestinasiNavigasi
 import kotlinx.coroutines.launch
 
-object DestinasiDetaiPemesanan : DestinasiNavigasi {
+object DestinasiDetailPemesanan : DestinasiNavigasi {
     override val route= "item_details"
     override val titleRes= R.string.detail_beli
     const val beliIdArg = "itemId"
@@ -92,7 +94,7 @@ fun DetailScreen(
 
 @Composable
 private fun ItemDetailBody(
-    itemDetailUiState: ItemDetailUiState,
+    itemDetailUiState: ItemDetailsUiState,
     onDelete: () -> Unit,
     modifier: Modifier
 ){
