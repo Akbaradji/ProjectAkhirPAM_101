@@ -23,6 +23,12 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.projectakhirpam.R
+import com.example.projectakhirpam.navigasi.DestinasiNavigasi
+
+object DestinasiHome: DestinasiNavigasi {
+    override val route = "home"
+    override val titleRes= R.string.app_name
+}
 
 @Composable
 fun Homepage(
