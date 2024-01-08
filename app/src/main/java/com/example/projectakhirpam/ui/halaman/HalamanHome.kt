@@ -59,6 +59,14 @@ fun Homepage(
                     fontSize = 35.sp,
                     modifier = Modifier.align(Alignment.CenterHorizontally)
                     )
+
+                Text(
+                    text = "Diamond",
+                    color = Color.DarkGray,
+                    fontFamily = FontFamily.SansSerif,
+                    fontSize = 35.sp,
+                    modifier = Modifier.align(Alignment.CenterHorizontally)
+                )
             }
         }
     }
