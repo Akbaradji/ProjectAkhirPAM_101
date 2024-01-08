@@ -38,7 +38,15 @@ import com.example.projectakhirpam.R
 import com.example.projectakhirpam.data.pembeli
 import com.example.projectakhirpam.model.DetailViewModel
 import com.example.projectakhirpam.model.PenyediaViewModel
+import com.example.projectakhirpam.navigasi.DestinasiNavigasi
 import kotlinx.coroutines.launch
+
+object DestinasiDetaiPemesanan : DestinasiNavigasi {
+    override val route= "item_details"
+    override val titleRes= R.string.detail_beli
+    const val beliIdArg = "itemId"
+    val routeWithArgs = "$route/{$beliIdArg}"
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
