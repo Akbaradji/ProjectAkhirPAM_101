@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">ProjectAkhirPAM</string>
+    <string name="back">Back</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="delete">Hapus</string>
+    <string name="attention">Perhatian</string>
+    <string name="desc">Tidak ada Data Pembelian</string>
+    <string name="input">Input Data</string>
+    <string name="beli">Beli</string>
+    <string name="required_field">* required fields</string>
+    <string name="nama">Nama Pembeli*</string>
+    <string name="harga">Harga*</string>
+    <string name="metode">Metode Pembayaran*</string>
+    <string name="telpon">Telpon Pembeli*</string>
+    <string name="input_data">Input Data</string>
+    <string name="edit">Edit Data</string>
+    <string name="detail_beli">Detail Beli</string>
+    <string name="edit_beli">Edit Beli</string>
 </resources>
