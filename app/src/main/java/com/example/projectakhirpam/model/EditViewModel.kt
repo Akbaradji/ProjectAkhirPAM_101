@@ -7,7 +7,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.projectakhirpam.repositori.RepositoriPembeli
-import kotlinx.coroutines.flow.filterNot
+import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
@@ -22,12 +22,12 @@ class EditViewModel (
     init {
         viewModelScope.launch {
             pembeliUiState = repositoriPembeli.getpembeliStream(itemId)
-                .filterNot()
+                .filterNotNull()
                 .first()
                 .toUiStatePembeli(true)
         }
     }
-    suspend fun updateSiswa(){
+    suspend fun updatePembeli(){
         if (validasiInput(pembeliUiState.detailPembeli)){
             repositoriPembeli.updatepembeli(pembeliUiState.detailPembeli.toPembeli())
         }

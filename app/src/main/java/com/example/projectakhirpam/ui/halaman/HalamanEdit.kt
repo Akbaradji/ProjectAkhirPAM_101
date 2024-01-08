@@ -8,9 +8,18 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.ActivityNavigator
+import com.example.projectakhirpam.R
 import com.example.projectakhirpam.model.EditViewModel
+import com.example.projectakhirpam.model.PenyediaViewModel
+import com.example.projectakhirpam.navigasi.DestinasiNavigasi
 import kotlinx.coroutines.launch
+
+object DestinasiEdit: DestinasiNavigasi {
+    override val route = "edit"
+    override val titleRes = R.string.edit
+    const val itemIdArg = "itemId"
+    val routeWithArgs = "$route/{$itemIdArg}"
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -5,6 +5,7 @@ import androidx.lifecycle.createSavedStateHandle
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
+import com.example.projectakhirpam.TopUpApp
 
 object PenyediaViewModel {
     val Factory = viewModelFactory {
@@ -27,5 +28,5 @@ object PenyediaViewModel {
     }
 }
 
-fun CreationExtras.topup():TopUpApp =
+fun CreationExtras.topup(): TopUpApp =
     (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY]as TopUpApp)
