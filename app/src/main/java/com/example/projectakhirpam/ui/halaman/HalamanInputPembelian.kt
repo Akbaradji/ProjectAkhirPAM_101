@@ -32,7 +32,15 @@ import com.example.projectakhirpam.model.DetailPembeli
 import com.example.projectakhirpam.model.InputViewModel
 import com.example.projectakhirpam.model.PenyediaViewModel
 import com.example.projectakhirpam.model.UIStateBeli
+import com.example.projectakhirpam.navigasi.BeliTopAppBar
+import com.example.projectakhirpam.navigasi.DestinasiNavigasi
 import kotlinx.coroutines.launch
+
+object DestinasiInput : DestinasiNavigasi {
+    override val route = "Input"
+    override val titleRes = R.string.input_data
+
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -65,7 +73,7 @@ fun PembelianScreen(
             },
             modifier = Modifier
                 .padding(innerPadding)
-                .verticalScroll(rememberCoroutineScope())
+                .verticalScroll(rememberScrollState())
                 .fillMaxWidth(),
         )
     }
