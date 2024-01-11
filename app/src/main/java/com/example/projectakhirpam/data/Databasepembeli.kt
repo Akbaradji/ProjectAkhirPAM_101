@@ -5,9 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [pembeli::class], version = 1, exportSchema = false)
+@Database(entities = [pembeli::class, game::class], version = 2, exportSchema = false)
 abstract class Databasepembeli: RoomDatabase(){
     abstract fun pembeliDao(): pembeliDao
+    abstract fun gameDao(): GameDao
 
     companion object{
         @Volatile
