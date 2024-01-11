@@ -18,7 +18,7 @@ interface gameDao {
     suspend fun delete(game: game)
 
     @Query("SELECT * from game WHERE id = :id")
-    fun getpembeli(id: Int): Flow<game>
+    fun getgame(id: Int): Flow<game>
 
     @Query("SELECT * from game ORDER BY nama ASC")
     fun getAllgame(): Flow<List<game>>
